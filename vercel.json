@@ -1,21 +1,16 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "index.py"
-    }
-  ],
-  "functions": {
-    "index.py": {
-      "memory": 512,  
-      "maxDuration": 10 
-    }
-  }
+    "version": 2,
+    "builds": [
+        {
+            "src": "index.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "index.py"
+        }
+    ],
+    "devCommand": "uvicorn index:app --reload --host 0.0.0.0 --port 8000"
 }
