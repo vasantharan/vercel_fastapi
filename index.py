@@ -1,8 +1,9 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
 import numpy as np
 from joblib import load
+from pydantic import BaseModel
 from sklearn.datasets import load_iris
+
+from fastapi import FastAPI
 
 target_names = load_iris().target_names
 
@@ -35,4 +36,4 @@ def predict_knn(data: input):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app)
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
