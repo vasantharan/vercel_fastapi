@@ -14,8 +14,8 @@
   ],
   "functions": {
     "index.py": {
-      "memory": 512,  // Adjust memory based on your app's needs
-      "maxDuration": 10 // Max duration for requests in seconds
+      "memory": 512,  
+      "maxDuration": 10 
     }
   }
 }
