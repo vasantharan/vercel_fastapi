@@ -33,7 +33,3 @@ def predict_knn(data: input):
     x_input = np.array(data.features).reshape(1, -1)
     prediction = knn_model.predict(x_input)
     return {"prediction": target_names[prediction][0]}
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)
