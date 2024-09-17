@@ -34,5 +34,3 @@ def predict_knn(data: input):
     x_input = np.array(data.features).reshape(1, -1)
     prediction = knn_model.predict(x_input)
     return {"prediction": target_names[prediction][0]}
-
-handler = Mangum(app)
